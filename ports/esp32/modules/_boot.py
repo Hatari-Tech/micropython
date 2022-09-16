@@ -10,4 +10,9 @@ except OSError:
 
     vfs = inisetup.setup()
 
+try:
+    uos.mkdir('credentials')
+except OSError:
+    pass
+
 gc.collect()

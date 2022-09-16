@@ -52,3 +52,13 @@ erase:
 
 submodules:
 	git submodule update --init $(addprefix ../../,$(GIT_SUBMODULES))
+
+
+#$(BUILD)/firmware.bin: $(BUILD)/bootloader.bin $(BUILD)/partitions.bin $(BUILD)/application.bin
+#	$(ECHO) "Create $@"
+#	$(Q)$(PYTHON) makeimg.py $^ $@
+#
+#
+#$(BUILD)/application.bin: $(BUILD)/application.elf
+#	$(ECHO) "Create $@"
+#	$(Q)$(ESPTOOL) --chip esp32 elf2image --flash_mode $(FLASH_MODE) --flash_freq $(FLASH_FREQ) --flash_size $(FLASH_SIZE) $<

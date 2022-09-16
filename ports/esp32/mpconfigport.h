@@ -10,6 +10,10 @@
 #include "freertos/FreeRTOS.h"
 #include "driver/i2s.h"
 
+//#define MICROPY_PY_SYS_SETTRACE       (1) // To activate sys.settrace(tracefunc)
+//#define MICROPY_COMP_CONST            (0) // required for MICROPY_PY_SYS_SETTRACE
+//#define MICROPY_PERSISTENT_CODE_SAVE  (1) // required for MICROPY_PY_SYS_SETTRACE
+
 // object representation and NLR handling
 #define MICROPY_OBJ_REPR                    (MICROPY_OBJ_REPR_A)
 #define MICROPY_NLR_SETJMP                  (1)
